@@ -1,0 +1,65 @@
+{% extends "riddles/base.html" %}
+{% load i18n %}
+
+{% block content %}
+{% csrf_token %}
+<!-- <form method="post" action=".">
+    <div class="container">
+      <input type="hidden" name="csrfmiddlewaretoken" value="rc3oNvkybvZcnvRF8RzYE1xtk0YkQ7fft3KNWKbBfMasnVzM4198WmL4l25KgPrM">
+      <p><label for="">Имя пользователя:</label> 
+      <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" required id="id_username"></p>
+      <p><label for="id_password">Пароль:</label> 
+      <input type="password" name="password" autocomplete="current-password" required id="id_password"></p>
+    </div>
+  <input type="submit" value="{% trans 'Войти' %}" />
+  {% csrf_token %}
+  <input type="hidden" name="next" value="{{ next }}" />
+</form>
+<div class="butt">
+  <p><a class="pass" href="{% url 'password_reset' %}">Не помню пароль</a>.</p>
+  <p><a class="reg" href="{% url 'django_registration_register' %}">Зарегистрироваться</a></p>
+</div> -->
+
+<form method="post" action=".">
+  <div class="limiter">
+		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-49">
+						Login
+					</span>
+
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+						<span class="label-input100">Имя пользователя</span>
+						<input class="input100" input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" required id="id_username"">
+						<span class="focus-input100" data-symbol=></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Password is required">
+						<span class="label-input100">Пароль</span>
+						<input class="input100" type="password" name="password" autocomplete="current-password" required id="id_password">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="text-right p-t-8 p-b-31">
+						<a href="{% url 'password_reset' %}">
+							Забыли пароль?
+						</a>
+            <p><a class="reg" href="{% url 'django_registration_register' %}">Зарегистрироваться</a></p>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+                {% csrf_token %}  
+								Войти
+							</button>
+						</div>
+					</div>
+</form>
+
+{% endblock %}
+{% block content2 %}
+
+{% endblock %}

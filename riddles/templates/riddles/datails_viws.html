@@ -1,0 +1,26 @@
+{% extends "riddles/layout.html" %} 
+
+
+{% block li%}
+<ul class="menu-main">
+    <li><a href="{% url 'home' %}">Главное</a></li>
+    <li><a href="{% url 'lol' %}">Добавить запись</a></li>
+    <li><a href="{% url 'login' %}">Войти</a></li>
+  </ul>
+{% endblock %}
+{% block content %}
+    <div class="int">
+                <h1 class="main">{{ art.title }}</h1>
+                <p>{{ art.full_text }}</p>
+                {% if art.image %}
+                    <p class="img"><img src="{{ art.image.url }}" width="400" height="400"></p>
+                {% else %}
+                    <p></p>
+                {% endif %} 
+                <p class="d">Дата публикации {{ art.data }}</p>
+                <button class="btn btn-success" type="sumbit">Купить</button> <br>
+                
+                
+    </div>
+
+{% endblock %}

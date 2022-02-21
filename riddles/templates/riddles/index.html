@@ -1,0 +1,31 @@
+{% extends "riddles/layout.html" %}
+
+
+
+{% block li %}
+<ul class="menu-main">
+    <li><a href="{% url 'home' %}">Главное</a></li>
+    <li><a href="{% url 'lol' %}">Добавить запись</a></li>
+    <li><a href="{% url 'login' %}">Войти</a></li>
+  </ul>
+{% endblock %}
+{% block content %}
+<h1 class="q">Привет</h1>
+<div class="ints">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.intro }}<br>
+        {{ form.full_text }}<br>
+        {{ form.price }}<br>
+        {{ form.data }}<br>
+        <input type="file" name="image" class="form-control"><br>
+        <span class="error">{{ error }}</span><br>
+        <button class="btn btn-success" type="sumbit">Добавить статью</button><br>
+    </form>
+    
+    
+
+</div>
+{% endblock %}
+

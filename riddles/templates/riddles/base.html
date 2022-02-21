@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="{% static 'riddles/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'riddles/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/iconic/css/material-design-iconic-font.min.css' %}">
+    <link rel="stylesheet" href="{% static 'riddles/vendor/animate/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'riddles/vendor/css-hamburgers/hamburgers.min.css' %}">
+    <link rel="stylesheet" href="{% static 'riddles/vendor/animsition/css/animsition.min.css' %}">
+    <link rel="stylesheet" href="{% static 'riddles/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'riddles/css/util.css' %}">
+    <link rel="stylesheet" href="{% static 'riddles/vendor/select2/select2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'riddles/vendor/jquery/jquery-3.2.1.min.js' %}">
+    <link rel="stylesheet" href="{% static 'riddles/vendor/animsition/js/animsition.min.js' %}">
+    <link rel="stylesheet" href="{% static 'riddles/vendor/bootstrap/js/popper.jss' %}">
+    <link rel="stylesheet" href="{% static 'riddles/vendor/bootstrap/js/bootstrap.min.js' %}">
+    <link rel="stylesheet" href="{% static 'riddles/vendor/select2/select2.min.js' %}">
+    <link rel="stylesheet" href="{% static 'riddles/vendor/daterangepicker/moment.min.js' %}">
+    <link rel="stylesheet" href="{% static 'vendor/daterangepicker/daterangepicker.js' %}">
+    <link rel="stylesheet" href="{% static 'riddles/vendor/countdowntime/countdowntime.js' %}">
+    <link rel="stylesheet" href="{% static 'riddles/js/main.js' %}">
+    
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+    {% block content2 %}
+    {% endblock %}
+</body>
+</html>
